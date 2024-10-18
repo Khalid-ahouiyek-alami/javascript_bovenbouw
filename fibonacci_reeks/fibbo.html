@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function fibonacci(aantal) {
+        let lijst = [0, 1]; // Start met de eerste twee getallen in de reeks
+        
+        for (let i = 2; i < aantal; i++) {
+            lijst.push(lijst[i - 1] + lijst[i - 2]); // Voeg de som van de vorige twee getallen toe
+        }
+        
+        return lijst; // return de volledige Fibonacci-reeks
+    }
+    
+    // Roep de functie aan voor bijvoorbeeld de eerste 10 getallen in de reeks
+    let fibReeks = fibonacci(10);
+    console.log(fibReeks);
+    </script>
+</body>
+</html>
