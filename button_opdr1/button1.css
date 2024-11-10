@@ -1,0 +1,29 @@
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .button-panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .green { background-color: green; }
+  .red { background-color: red; }
+  .blue { background-color: blue; }
