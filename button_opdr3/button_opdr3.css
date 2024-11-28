@@ -1,0 +1,35 @@
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(5, auto); 
+    padding: 10px;
+    margin: 10px;
+    background-color: gray;
+    
+}
+
+
+
+.grid-button {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border: 2px solid black;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+
+
+}
+ body{
+    width: 400px;
+    text-align: center;
+    
+ }
+
+.grid-button.red {
+    background-color: red;
+}

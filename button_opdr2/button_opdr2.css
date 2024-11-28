@@ -1,0 +1,32 @@
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .button-panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, auto);
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: green;
+  }
+  
+  .button.red {
+    background-color: red;
+  }
+  
