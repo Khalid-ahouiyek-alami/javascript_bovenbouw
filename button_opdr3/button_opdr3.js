@@ -1,36 +1,30 @@
+let y = document.getElementById("container");
+const colors = ["red", "blue", "yellow", "orange", "purple", "pink", "brown", "black"];
+y.style.backgroundColor = "grey";
+y.style.width = "300px";
+y.style.height = "360px";
+y.style.margin = "auto";
+y.style.padding = "auto";
+y.style.top = "auto";
 
-const totalButtons = 30; // aantal knoppen
-const buttonsPerRow = 5; // knoppen per rij
+for (var aantal = 0; aantal < 30; aantal++) {
+    var button = document.createElement("button");
+    button.style.backgroundColor = "green";
+    button.style.margin = "5px";
+    button.style.height = "50px";
+    button.style.width = "50px";
+    button.textContent = aantal + 1;
 
-const container = document.getElementById("container");
+    button.clickCount = 0;
 
-function createButtons(total, perRow) {
-    container.classList.add("button-grid");
+    button.onclick = function () {
+        this.clickCount++;
 
-    const colors = ["red", "purple", "blue", "black"]; // kleuren voor elke klik
+        this.style.backgroundColor = colors[this.clickCount];
+        if(this.clickCount >= colors.length){
+            this.remove();
+        }
+    };
 
-    for (let i = 1; i <= total; i++) {
-        const button = document.createElement("button");
-
-        button.textContent = i;
-        button.classList.add("grid-button");
-
-        let clickCount = 0; // bijhouden hoe vaak er op de knop is geklikt
-
-        button.addEventListener("click", () => {
-            clickCount++; // verhoog het aantal klikken
-
-            if (clickCount <= colors.length) {
-                // Verander de kleur van de knop
-                button.className = `grid-button ${colors[clickCount - 1]}`;
-            } else {
-                // Verwijder de knop na 5 klikken
-                button.remove();
-            }
-        });
-
-        container.appendChild(button);
-    }
+    y.appendChild(button);
 }
-
-createButtons(totalButtons, buttonsPerRow);
