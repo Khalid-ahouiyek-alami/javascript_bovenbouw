@@ -1,14 +1,10 @@
-
 #container {
     display: grid;
     grid-template-columns: repeat(5, auto); 
     padding: 10px;
     margin: 10px;
     background-color: gray;
-    
 }
-
-
 
 .grid-button {
     width: 50px;
@@ -21,15 +17,25 @@
     cursor: pointer;
     text-align: center;
     margin: 5px;
-
-
 }
- body{
+
+body {
     width: 400px;
     text-align: center;
-    
- }
+}
 
 .grid-button.red {
     background-color: red;
+}
+
+.grid-button.purple {
+    background-color: purple;
+}
+
+.grid-button.blue {
+    background-color: blue;
+}
+
+.grid-button.black {
+    background-color: black;
 }
